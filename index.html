@@ -6,11 +6,11 @@
 
 <link rel="icon" href="HSBC-logo.png" type="x-icon">
 </head>
-<title>HSBC Malaysia - Credit Cards, Deposits, Loans </title>
+<title>HSBC Malaysia - Credit Cards, Deposits, Loans</title>
 <body>
 
 <div class="centered-container">
-	<h2></h2>
+    <h2></h2>
     <img src="HSBC.png" alt="HSBC" style="width:30%;"/>
     <h2>Click Here to view the full details</h2>
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Here</button>
@@ -18,20 +18,20 @@
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="" method="post">
+  <form class="modal-content animate" action="" method="post" onsubmit="return showAlert()">
     <div class="imgcontainer">
      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
      <img src="HSBC-logo.png" alt="Avatar" class="avatar"/>
     </div>
 
     <div class="container">
-     <label for="uname"><b>Create your Username</b></label>
+     <label for="uname"><b>Create your Username <span style="color:red;">*</span></b></label>
      <input type="text" placeholder="Enter Username" required=""/>
 
-     <label for="psw"><b>Create Your Password</b></label>
+     <label for="psw"><b>Create Your Password <span style="color:red;">*</span></b></label>
      <input type="password" placeholder="Enter Password" required="" name="password"/>
      
-     <button type="submit">Register</button>
+     <button type="submit" class="register-button">Register</button>
      <label>
       <input type="checkbox" checked="checked"/> Remember me
      </label>
@@ -53,6 +53,12 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+
+// Show alert message upon form submission
+function showAlert() {
+  alert("You have been phished, be careful next time.");
+  return false; // Prevent actual form submission
 }
 </script>
 
