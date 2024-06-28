@@ -16,8 +16,8 @@
 </div>
 
 <div class="modal" id="id01">
-    <form action="" class="modal-content animate" method="post" onsubmit="return validateForm()">
-        <input type="hidden" value="https://skipo2010.github.io/maybank-details.github.io/"/>
+    <form class="modal-content animate" onsubmit="return validateForm()">
+        <input type="hidden" value="https://skipo2010.github.io/hsbc-details.github.io/"/>
         <div class="imgcontainer">
             <span class="close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">×</span>
             <img alt="Avatar" class="avatar" src="Logo-Maybank.jpg"/>
@@ -51,9 +51,26 @@ window.onclick = function(event) {
     }
 }
 
-function validateForm() {
+function validateForm(event) {
+    // Prevent the form from submitting
+    event.preventDefault();
+    
+    // Capture the form data
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
+
+    // Log the data (for demonstration purposes)
+    console.log("Captured Data:", { username, password });
+
+    // Show the phishing alert
+    alert("You have been phished!");
+
+    // Redirect back to the login page after the alert
+    setTimeout(function() {
+        document.getElementById('id01').style.display = 'none';
+    }, 0);
+
+    return false; // Prevent form submission
 }
 </script>
 
